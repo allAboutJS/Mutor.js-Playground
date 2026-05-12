@@ -50,7 +50,7 @@ export default function MutorPlayground() {
 			setOutput(result);
 			setRenderTime(Number((endTime - startTime).toFixed(2)));
 		} catch (err) {
-			console.log(err);
+			console.error(err);
 			setError(err.message);
 			setOutput("");
 		}
@@ -69,7 +69,7 @@ export default function MutorPlayground() {
 	}, [template, context, components, debouncedRender]);
 
 	// Handle demo selection
-	const handleDemoSelect = (index: number) => {
+	const handleDemoSelect = (index) => {
 		const demo = DEMO_TEMPLATES[index];
 		setSelectedDemo(index);
 		setTemplate(demo.template);

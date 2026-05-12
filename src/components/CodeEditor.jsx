@@ -12,13 +12,13 @@ export default function CodeEditor({
 
 	const lines = useMemo(() => {
 		return value.split("\n");
-	}, [value]) as string[];
+	}, [value]);
 
-	function handleInput(e: React.InputEvent<HTMLDivElement>) {
+	function handleInput(e) {
 		onChange?.(e.currentTarget.textContent ?? "");
 	}
 
-	function handleKeyDown(e: React.KeyboardEvent) {
+	function handleKeyDown(e) {
 		// Tab support
 		if (e.key === "Tab") {
 			e.preventDefault();
