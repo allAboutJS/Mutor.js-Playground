@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.preview-content * {
+	all: revert;
+}
+
+.preview-content table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 1em 0;
+}
+
+.preview-content th,
+.preview-content td {
+	border: 1px solid #999;
+	padding: 8px 12px;
+	text-align: left;
+}
+
+.preview-content th {
+	background-color: #333;
+	color: #fff;
+}
+
+.preview-content td {
+	background-color: #222;
+	color: #ddd;
+}
